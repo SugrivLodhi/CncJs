@@ -1,5 +1,5 @@
 const obj = [{ id: 1, name: 'sugriv', lastName: 'Lodhi', address: 'sdr' },
-        { id: 2, name: 'Rpy', lastName: 'Lodhi', address: 'sdr' },
+        { id: 2, name: 'rpy', lastName: 'Lodhi', address: 'sdr' },
         { id: 3, name: 'Pk', lastName: 'Lodhi', address: 'sdr' }
     ]
     //console.log(Object.keys(obj).length)
@@ -9,6 +9,9 @@ const obj = [{ id: 1, name: 'sugriv', lastName: 'Lodhi', address: 'sdr' },
     // })
 
 // console.log(allData)
-const allData = obj.map((data) => data.filter((item) => {
-    return item.include(s)
-}))
+const allData = obj.map((data) => {
+    return data.name
+}).filter((item) => {
+    return item.includes('r')
+})
+console.log(allData);
