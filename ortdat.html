@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table of Data</title>
+</head>
+
+<body>
+    <h1>All Data of our colleage</h1>
+    <div id="root"></div>
+    <p>Hello my name is sugriv lodhi ,I am working as a react js Deveoleper traing in my Company</p>
+    <p>All the my Coleage are awesome and they working hardly to grow our company as well as they can groe they skill</p>
+    <p>Our team also create some fun activity to enjoy and make better connection with all of us </p>
+    <p>all our senior are very suporting and make me more comfortable and we are taking to each other without any hegitation</p>
+    <p>Our Raj Sir create lot of fun between us and he is very friendly </p>
+    <p>all the people in my company are very friendy also very supporting and help to each other tin growig theri interpersonanal skill</p>
+    <p>Our hr Aporawa Khandelwal is very friebdly and make me very comfortabe to talk with them</p>
+    <p>Amita mam is good and cool.</p>
+    <p>Hrendra sir is something like commedian and he is very good in nature</p>
+    <p>Punnet sony sir managing hubstop and all the qery related to the hub stop thy are resolvinh and make better as possible as</p>
+    <p>Tendra sir is working as aBassiness anyalist and he is very good guys and also very friendly and have five o six year of experince in the bussiness analysit fields</p>
+    <p>Heena mal also good and she is very firnldy with me and have very good smile face and she has very good sense o hummer </p>
+    <p>Jaid sir is very cool and also help me </p>
+    <p>Ajaypal sir is very good person is kind of commedian and work very well and He is working as a QA</p>
+    <p>Mohan ji is very helpful person and he has responsbitly to mantainn our office and Create Fun with all o us </p>
+    <p>Didi is very good .She serve all the think like tea and water and party thing also </p>
+    <p>Kavi sir very good and create some betting joking envioument by ussing some bhojpury work and he is working as Bussiness mentor </p>
+</body>
+<script>
+    const mainRoot = document.getElementById('root');
+    const todo = [{
+        name: 'sugriv',
+        lastname: 'lodhi'
+    }, {
+        name: 'tejendra',
+        lastname: 'singh'
+    }, {
+        name: 'Heena',
+        lastname: 'rathore'
+    }, {
+        name: 'Jaid ',
+        lastname: 'Ahamad'
+    }]
+    let arr = []
+    const allDatas = todo.map((item) => {
+        const data = item.name
+        const listdata = `<li>${data}</li>`
+        const lastName = item.lastname
+        const lastData = `<li>${lastName}</li>`
+        arr.push(listdata, lastData);
+    })
+    mainRoot.innerHTML = ` <ul>${arr.join('')}</ul>`
+</script>
+
+</html>
