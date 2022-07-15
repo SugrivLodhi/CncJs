@@ -19,14 +19,14 @@
 // //     console.log("Welcome to GeeksforGeeks!");
 // // })();
 
-// const obconst obj1 = { name: 'sugriv', lastName: "lodhi" }j = [{ name: 'sugriv', add: "sdr" }];
-// console.log("length of the object", obj.length);
-// console.log("object length is", Object.keys(obj1).length());
-// console.log("object length of obj1", obj1.length());
-let a = {}
-if (a.isEmpty()) {
-    console.log("hello I am undefine")
-}
+const obj1 = { name: 'sugriv', lastName: "lodhi" }
+console.log("length of the object", obj1.length());
+//console.log("object length is", Object.keys(obj1).length());
+//console.log("object length of obj1", obj1.length());
+//let a = {}
+// if (a.isEmpty()) {
+//     console.log("hello I am undefine")
+// }
 // if ({} == 'undefined') {
 // console.log("hello I am Undefined");
 // }

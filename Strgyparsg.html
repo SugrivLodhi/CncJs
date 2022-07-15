@@ -14,11 +14,11 @@
     </div>
 </body>
 <script>
-    const text = '{"name": "John","age": "39","city": "New York"}';
-    const text1 = JSON.parse(text)
-    const text2 = JSON.stringify(text2)
+    const text = {name: "John",age: "39",city: "New York"}
+    const text1 = parse.JSON("text")
+    console.log("pares object",text1)
+    //const text2 = JSON.stringify(text1)
     const divs = document.getElementById('root');
-    divs.innerHTML = text1
+    divs.innerHTML = text
 </script>
-
 </html>
