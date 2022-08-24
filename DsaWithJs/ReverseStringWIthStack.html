@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script>
+         let item =[] 
+        let currentSize=item.length;
+        function push(newValue){
+            item[currentSize] = newValue;
+            currentSize++;          
+        }
+      function pop(items){
+            currentSize--;
+          let rstr = items[currentSize];
+             
+          return rstr   
+      }
+
+       function reverseStr(data){
+          for(let i=0 ;i<data.length; i++){
+            push(data[i]);
+          }
+          for(let i=0 ;i<data.length; i++){
+              data[i] = pop(item);
+          }
+          
+       }
+       function display(){
+        console.warn("allData",item);
+        console.warn('revrse',str);
+       }
+       
+        let str ='sugriv';
+        str = str.split('');
+        console.log(str);
+
+       console.warn(reverseStr(str));
+        
+        display();
+        
+    </script>
+
+</head>
+<body>
+    <h1>SReverse</h1>
+</body>
+</html>
