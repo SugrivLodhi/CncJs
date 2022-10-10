@@ -14,8 +14,9 @@
              for(ch of str){
                 objStr[ch] = (objStr[ch] || 0) +1
              }
+             console.log("objstree",objStr)
             for(ch of strs){
-                 console.warn(objStr[ch])
+               console.log("strs",ch)
                  if(!objStr[ch]){
                     return false
                  }
@@ -23,8 +24,8 @@
             }
             return true;
        }
-     let str1 ="hello"
-     let str2 = 'ollhe'
+     let str1 ="banana"
+     let str2 = "nabanb"
    console.warn(isAnagram(str1,str2))
     </script>
 </head>

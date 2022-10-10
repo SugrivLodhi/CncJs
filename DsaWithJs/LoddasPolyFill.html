@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loddas</title>
+    
+</head>
+<body>
+   <h1>Loddas</h1>
+   <button id="one" >increment</button>
+   <h1 id ="count">0</h1>
+   <h2 id="two">0</h2>   
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    const btnOne = document.getElementById("one")
+    const countValue =document.getElementById('count')
+    const countValueTwo = document.getElementById("two")
+   let count =0;
+   let triggerCount =0
+   const start = new Date().getTime();
+//    const debounceCount = _.debounce(() =>{
+//          countValueTwo.innerHTML = ++triggerCount;
+//    },800)
+//    const throttleCount = _.throttle(() =>{
+//        const now = new Date().getTime();
+//        console.log(now-start);
+//          countValueTwo.innerHTML = ++triggerCount;
+//    },800)
+
+// polyfill of debounce function
+// const myDebounce = (cb,d)=>{
+//      let timer;
+//      return function(){
+//         if(timer) clearTimeout(timer);
+//         timer =setTimeout(() =>{
+//              cb()
+//         },d)
+//      }
+// }
+
+// const debounceCount = myDebounce(() =>{      
+//          countValueTwo.innerHTML = ++triggerCount;
+//    },800)
+   const myTrottling = (cb,d)=>{
+     let lastTime =0;
+     return function(){
+        let now = new Date().getTime();
+        if(now-lastTime<d) return 
+        lastTime=now;
+        return cb();
+     }
+}
+
+const trotlingCount = myTrottling(() =>{      
+         countValueTwo.innerHTML = ++triggerCount;
+   },800)
+    btnOne.addEventListener("click", () =>{
+         countValue.innerHTML=++count;
+         trotlingCount();
+    })
+</script>
+</html>

@@ -66,3 +66,23 @@ The optional chaining works only for declared variables.*/
 // As we can see, all of them are straightforward and simple to use. The ?. checks the left part for null/undefined and allows the evaluation to proceed if it’s not so.
 
 // A chain of ?. allows to safely access nested properties.
+//  const data ={
+
+//  }
+//  console.log(data?.name || 1)
+
+//Sometimes an object contains some set of properties, but you want to destructure it changing the names.
+// const person = {
+//     firstName: 'Tom',
+//     lastName: 'Cruise'
+//   }
+  
+//   const { firstName: name, lastName:lname } = person
+//   console.log(name,lname);
+
+
+ export const app =()=>{
+  console.log("this lead");
+ }
+ 
+
