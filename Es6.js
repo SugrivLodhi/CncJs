@@ -81,8 +81,14 @@ The optional chaining works only for declared variables.*/
 //   console.log(name,lname);
 
 
- export const app =()=>{
-  console.log("this lead");
- }
  
+//  export const app =()=>{
+//   console.log("this lead");
+//  }
+// const typo = "1"
+// console.log("value",typo);
+// console.log("value",`${typo}`);
+const val = "123453331111"
+console.log(val.slice(0,val.length-6))
+console.log(val.slice(val.length-6,val.length-1))
 
