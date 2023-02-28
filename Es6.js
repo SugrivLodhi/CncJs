@@ -88,7 +88,16 @@ The optional chaining works only for declared variables.*/
 // const typo = "1"
 // console.log("value",typo);
 // console.log("value",`${typo}`);
-const val = "123453331111"
-console.log(val.slice(0,val.length-6))
-console.log(val.slice(val.length-6,val.length-1))
-
+// const val = "123453331111"
+// console.log(val.slice(0,val.length-6))
+// console.log(val.slice(val.length-6,val.length-1))
+// const val= "auat/aa/httpaa"
+// console.log(val.includes('/aa/httpaa')) 
+//const homePageLinks = { mobile: 'https://www.iselect.com.au/mobile/' },
+// const data =[null,null];
+// console.log("sd",data.toString()+"val")
+// console.log("data",!!undefined)
+const common =(a=10,b=20,c=40) =>{
+    return a+b+c
+}
+console.log(common(0,10,0))
