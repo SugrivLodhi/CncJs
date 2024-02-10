@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>webcam open </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webcam open</title>
     <style>
-        .container {
-            border: 10px solid rgb(121, 115, 115)
-        }
-        
-        #videoElement {
-            background-color: rgb(160, 142, 142);
-            width: 500px;
-            height: 350px;
-        }
-        
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-    </style>
-</head>
+      .container {
+        border: 10px solid rgb(121, 115, 115);
+      }
 
-<body>
+      #videoElement {
+        background-color: rgb(160, 142, 142);
+        width: 500px;
+        height: 350px;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+
+  <body>
     <h1>Please open camera</h1>
     <div class="container">
-        <video autoplay="true" id="videoElement"></video>
+      <video autoplay="true" id="videoElement"></video>
     </div>
-</body>
-<script>
+  </body>
+  <script>
     const video = document.querySelector("#videoElement");
     if (navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({
-            video: true
-        }).then(function(stream) {
-            console.log("response", stream);
-            video.srcObject = stream;
-        }).catch(function(err) {
-            console.log("something went wrong");
+      navigator.mediaDevices
+        .getUserMedia({
+          video: true,
         })
+        .then(function (stream) {
+          console.log("response", stream);
+          video.srcObject = stream;
+        })
+        .catch(function (err) {
+          console.log("something went wrong");
+        });
     } else {
-        console.log("getUseredia is not supported  in this browser");
+      console.log("getUseredia is not supported  in this browser");
     }
-</script>
-
+  </script>
 </html>

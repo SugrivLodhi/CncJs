@@ -19,8 +19,13 @@
 // //     console.log("Welcome to GeeksforGeeks!");
 // // })();
 
-const obj1 = { name: 'sugriv', lastName: "lodhi" }
-console.log("length of the object", obj1.length());
+//Length is a property of JavaScript strings, arrays, and some other objects like function that returns the number of characters or elements in that object. For example, if you have a string 'hello', calling the . length property will return 5 because the string 'hello' has 5 characters.
+ const funStr = ()=>{
+    return "hello"
+ }
+console.log("length",funStr().length)
+const obj1 = { name: "sugriv", lastName: "lodhi" };
+console.log("length of the object", obj1.length);
 //console.log("object length is", Object.keys(obj1).length());
 //console.log("object length of obj1", obj1.length());
 //let a = {}

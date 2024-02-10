@@ -1,19 +1,18 @@
-function getAllo(){
-    return new Promise((resove,reject)=>{
-           let allo=5      
+// we can name any thing in Promise parameter ,it only matter sequence of using
+function getAllo(allo){
+    return new Promise((res,rej)=>{     
         setTimeout(() =>{
                  if(allo>3){
-                    resove("allo parathe is ready to serve");
+                    res("allo parathe is ready to serve");
                  }
                  else{
-                    reject("I have no mood")
+                    rej("I have no mood ,I will ")
                  }
                  },1000);     
     })
 }
-function getPaneer(){
+function getPaneer(allo){
     return new Promise((resove,reject)=>{
-           let allo=5  
         setTimeout(() =>{
                  if(allo>3){
                     resove("Paneer is ready to serve");
@@ -24,23 +23,24 @@ function getPaneer(){
                  },1000);     
     })
 }
-// getAllo().then((val) =>{
+// getAllo(2).then((val) =>{
 //     console.log(val);
-// })
-// getPaneer().then((vals)=>{
+// }).catch((v)=> console.log(v))
+// getPaneer(3).then((vals)=>{
 //     console.log(vals)
 // })
 // .catch((er) =>{
 //     console.log(er) 
 // })
- 
+
+ //once one promise failed it reject to excute next line of code and come out from try to catch
 async function getResult() {
     try{
-        let result = await getAllo();
+        let result = await getAllo(4);
         console.log(result)
         console.log("hello I am ready to run")
-        let resultTwo = await getPaneer();
-        
+        let resultTwo = await getPaneer(3);
+         
         console.log(resultTwo);
         
     } 

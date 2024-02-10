@@ -25,17 +25,18 @@ const memoise =(fun) =>{
 } 
 const cal =memoise(calc)
  
-// console.time()
-// console.log("sum",cal(5));
-// console.timeEnd();
-// console.time()
-// console.log("sum",cal(5));
-// console.timeEnd();
-
 console.time()
-console.log("sum",cal(20));
+console.log("sum",cal(5));
+console.timeEnd();
+console.time()
+console.log("sum",cal(5));
 console.timeEnd();
 
 console.time()
 console.log("sum",cal(20));
 console.timeEnd();
+
+console.time()
+console.log("sum",cal(20));
+console.timeEnd();
+console.time()
