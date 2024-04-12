@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+      //An anagram is a word or phrase formed by rearranging the letters of another word or phrase, using all the original letters exactly once.
        function isAnagram(str,strs){
              let objStr ={};
              if(str.length !==strs.length){
@@ -15,8 +16,7 @@
                 objStr[ch] = (objStr[ch] || 0) +1
              }
              console.log("objstree",objStr)
-            for(ch of strs){
-               console.log("strs",ch)
+            for(ch of strs){  
                  if(!objStr[ch]){
                     return false
                  }
