@@ -1,44 +1,41 @@
 <html>
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-       let queue =[]
-       let currentSize = queue.length
-      let maxSize =5
-      function enQueue(newValue){
-        if(currentSize<maxSize){
-            queue[currentSize]=newValue
-            currentSize++
-        }
-        else{
-            alert("queue is full")
+      let queue = [];
+      let currentSize = queue.length;
+      let maxSize = 5;
+      function enQueue(newValue) {
+        if (currentSize < maxSize) {
+          queue[currentSize] = newValue;
+          currentSize++;
+        } else {
+          alert("queue is full");
         }
       }
-        
-        function deQueue(){
-            if(currentSize<=0){
-                alert('queue is empty');
-            }
-            for(let i=0 ; i<queue.length; i++){
-                 queue[i] = queue[i+1];
-            }
-            currentSize--;
-            queue.length = currentSize;
+
+      function deQueue() {
+        if (currentSize <= 0) {
+          alert("queue is empty");
         }
-        function display(){
-            console.warn(queue);
+        for (let i = 0; i < queue.length; i++) {
+          queue[i] = queue[i + 1];
         }
+        currentSize--;
+        queue.length = currentSize;
+      }
+      function display() {
+        console.warn(queue);
+      }
       enQueue(10);
       enQueue(20);
       enQueue(30);
-      
-      
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Queue</h1>
-</body>
+  </body>
 </html>

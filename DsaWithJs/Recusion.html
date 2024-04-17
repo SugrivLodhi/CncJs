@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Recusion with Javascript</h1>
-</body>
-<script>
-    //In recusion, most important part is finding the condition 
+  </body>
+  <script>
+    //In recusion, most important part is finding the condition
     //at which it can stop the calling it self  and give the expexted result
-   function factorial(item){
-        if(item == 0){
-        return 1
-       }
-      return item*factorial(item-1);
-   }
- console.warn(factorial(4))
-</script>
+    function factorial(item) {
+      if (item == 0) {
+        return 1;
+      }
+      return item * factorial(item - 1);
+    }
+    console.warn(factorial(4));
+  </script>
 </html>
 /

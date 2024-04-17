@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Indirect recursion</h1>
-</body>
-<script>
-//    function apple(){
+  </body>
+  <script>
+    //    function apple(){
     // console.log("apple");
     // fruit();
-//    }
-//    const fruit = () =>{
+    //    }
+    //    const fruit = () =>{
     // console.log("fruit");
-//    }
-   
-//    apple();
-   function text(x) {
-       console.warn(x);
-       if(x>0){
-        text(x-1)
-       }
-       console.warn(x);
-   }
-   
-   text(6)
+    //    }
 
+    //    apple();
+    function text(x) {
+      console.warn(x);
+      if (x > 0) {
+        text(x - 1);
+      }
+      console.warn(x);
+    }
 
-</script>
+    text(6);
+  </script>
 </html>

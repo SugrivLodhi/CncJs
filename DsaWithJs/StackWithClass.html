@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<script>
+  </head>
+  <script>
     class Stack {
-        item =[];
-         currentSize;
-         maxSize;
-        constructor(size){
-            this.maxSize =size;
-            this.currentSize =this.item.length;
+      item = [];
+      currentSize;
+      maxSize;
+      constructor(size) {
+        this.maxSize = size;
+        this.currentSize = this.item.length;
+      }
+      push(newValue) {
+        if (this.currentSize > this.maxSize) {
+          alert("stack is full");
+        } else {
+          this.item[this.currentSize] = newValue;
+          this.currentSize++;
         }
-        push(newValue){
-            if(this.currentSize > this.maxSize){
-                alert("stack is full");
-            }
-            else{
-                this.item[this.currentSize] = newValue;
-                this.currentSize++;
-            }
-        }
-         pop(){
-              this.currentSize--;
-              this.item.length =this.currentSize;       
-           }
-        display(){
-            console.warn(this.item);
-        }
+      }
+      pop() {
+        this.currentSize--;
+        this.item.length = this.currentSize;
+      }
+      display() {
+        console.warn(this.item);
+      }
     }
-    st  =new Stack(3);
-     st.push(10);
-     st.push(20);
-     st.push(30);
-     st.display();
-</script>
-<body>
+    st = new Stack(3);
+    st.push(10);
+    st.push(20);
+    st.push(30);
+    st.display();
+  </script>
+  <body>
     <h1>St with cls</h1>
-</body>
+  </body>
 </html>
